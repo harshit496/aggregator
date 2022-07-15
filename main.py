@@ -16,6 +16,6 @@ def get_api_events():
     return result
 
 if __name__ == '__main__':
-    scheduler.add_job(id = 'Scheduled Task', func=get_api_events, trigger="interval", seconds=3)
+    scheduler.add_job(id = 'Scheduled Task', func=get_api_events, trigger="interval", hours=1)
     scheduler.start()
     app.run()
